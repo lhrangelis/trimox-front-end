@@ -1,0 +1,104 @@
+@import "tailwindcss";
+
+/*
+ * Tokens da identidade Trimox. Toda cor usada no projeto sai daqui —
+ * nada de hex solto nos componentes.
+ */
+@theme {
+  --font-sans: var(--font-schibsted), "Helvetica Neue", Helvetica, sans-serif;
+  --font-serif: var(--font-instrument), Georgia, serif;
+
+  /* Marca */
+  --color-brand: #1f4a3e; /* Verde Navalha · ações e marca */
+  --color-brand-ink: #1a3f35; /* texto sobre fundo sálvia */
+  --color-graphite: #15171a; /* texto e superfícies escuras */
+  --color-graphite-2: #2a2d32;
+  --color-linen: #f5f3ee; /* fundo */
+  --color-sage: #e4ece7;
+  --color-sage-line: #b9ccc1;
+  --color-brass: #b8873b; /* detalhe, uso pontual */
+
+  /* Superfícies e linhas */
+  --color-surface: #ffffff;
+  --color-sidebar: #fbfaf7;
+  --color-mint: #f3f7f5; /* item selecionado */
+  --color-sand: #ece9e2;
+  --color-chip: #f2f0eb;
+  --color-line: #e3dfd6;
+  --color-line-soft: #f0ede6;
+  --color-line-strong: #cfcac0;
+  --color-disabled: #d9d5cc;
+
+  /* Texto */
+  --color-body: #3a3d42;
+  --color-muted: #5b5f66;
+  --color-done: #4a4e55;
+  --color-on-dark: #c9ccd1;
+  --color-on-dark-muted: #a9adb3;
+  --color-on-brand: #cfddd6;
+  --color-mint-on-dark: #9fc2b3;
+
+  /* Estados */
+  --color-warn-bg: #f7eedd;
+  --color-warn-fg: #5e410f;
+  --color-warn-bd: #b88a3c;
+  --color-info-bg: #e6ecf5;
+  --color-info-fg: #27365f;
+  --color-danger-bg: #f9e3df;
+  --color-danger-fg: #8a2a1c;
+  --color-danger: #c2412d;
+
+  /* Gráficos */
+  --color-chart-positive: #178563;
+  --color-chart-amber: #b5761a;
+  --color-heat-0: #f0ede6;
+  --color-heat-1: #d5e2db;
+  --color-heat-2: #a9c6b8;
+  --color-heat-3: #6f9c88;
+  --color-heat-4: #3a6e5b;
+  --color-heat-5: #1f4a3e;
+}
+
+@layer base {
+  html {
+    background: var(--color-linen);
+    color: var(--color-graphite);
+    -webkit-font-smoothing: antialiased;
+  }
+
+  body {
+    font-family: var(--font-sans);
+  }
+
+  a {
+    color: var(--color-brand);
+  }
+
+  a:hover {
+    color: var(--color-graphite);
+  }
+
+  :focus-visible {
+    outline: 2px solid var(--color-brand);
+    outline-offset: 2px;
+  }
+}
+
+@utility tabular {
+  font-variant-numeric: tabular-nums;
+}
+
+@utility eyebrow {
+  font-size: 12px;
+  font-weight: 600;
+  letter-spacing: 0.06em;
+  text-transform: uppercase;
+  color: var(--color-muted);
+}
+
+@utility editorial {
+  font-family: var(--font-serif);
+  font-style: italic;
+  font-weight: 400;
+  letter-spacing: -0.01em;
+}
